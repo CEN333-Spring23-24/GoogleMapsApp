@@ -1,0 +1,12 @@
+<m-container>
+  <m-search-button (search)="filterTerm = $event"></m-search-button>
+  <m-table
+    [data]="listOfCars"
+    [filterTerm]="filterTerm"
+    [showDeleteButton]="true"
+    [showMoreDetails]="true"
+    [showCaption]="true"
+    caption="Cars List"
+    (navigate)="navigateToDetails($event)">
+  </m-table>
+</m-container>

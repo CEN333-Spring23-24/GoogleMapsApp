@@ -1,0 +1,25 @@
+<m-container>
+  <m-form-ula label="Output A" [class]="getCondition(calculationResultA)" result="{{ calculationResultA }}" (calculate)="calc_event()">
+
+    <label for="input1">Input 1 (Event Calculate): </label>
+    <input placeholder="" [(ngModel)]="input1" type="number" id="input1" name="_input1" />
+    <label for="input2">Input 2 (Event Calculate): </label>
+    <input placeholder="" [(ngModel)]="input2" type="number" id="input2" name="_input2" />
+
+    <button type="submit" class="pure-button pure-menu-link">
+      Calculate
+    </button>
+
+  </m-form-ula>
+
+  <m-form-ula label="Output B" [class]="getCondition(calculationResultB)" result="{{ calculationResultB }}">
+
+    <label for="input1">Input 3 (Auto-calculate): </label>
+    <input placeholder="" [(ngModel)]="input3" (ngModelChange)="calc_auto()" type="number" id="input3" name="_input3" />
+    <label for="input2">Input 4 (Auto-calculate): </label>
+    <input placeholder="" [(ngModel)]="input4" (ngModelChange)="calc_auto()" type="number" id="input4" name="_input4" />
+
+  </m-form-ula>
+</m-container>
+
+

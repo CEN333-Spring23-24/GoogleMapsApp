@@ -1,0 +1,7 @@
+
+
+
+Write a Typescript function that takes in as input 
+a center with longitude and latitude and a desired number of locations N
+it should return a list of N randomly selected locations around that center. 
+Make sure that the locations are not more than 5km away from that center. 
